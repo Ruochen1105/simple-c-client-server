@@ -1,7 +1,7 @@
-all: httpd client
+all: http_server client
 
-httpd: httpd.c
-	gcc -W -Wall -lpthread -o server httpd.c
+http_server: http_server.c
+	gcc -W -Wall -lpthread -o server http_server.c
 
 client: simpleclient.c
 	g++ -std=c++11 -o client simpleclient.c
@@ -9,4 +9,4 @@ client: simpleclient.c
 clean:
 	rm server client
 
-.SILENT: client httpd
+.SILENT: client http_server
