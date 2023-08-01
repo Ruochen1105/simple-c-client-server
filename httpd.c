@@ -494,11 +494,7 @@ int main(void)
   sleep(1);
   char buf[1024];
 
-  strcpy(buf, "HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n<P>Lorem Ipsum\r\n");
+  strcpy(buf, "HTTP/1.1 200 OK\r\nContent-type: text/html\r\nContent-Length: 0\r\n\r\n");
   send(client_sock, buf, strlen(buf), 0);
-
- close(server_sock);
-
- return(0);
  }
 }
