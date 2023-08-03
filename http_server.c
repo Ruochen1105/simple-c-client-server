@@ -76,7 +76,6 @@ int main(void)
   if (client_sock == -1) {
    error_die("accept");
   }
-  sleep(1);
   char buf[1024];
 
   strcpy(buf, "HTTP/1.1 200 OK\r\nfoo: bar\r\nContent-type: text/html\r\nContent-Length: 11\r\n\r\nLorem Ipsum");
